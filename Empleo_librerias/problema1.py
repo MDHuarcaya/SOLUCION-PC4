@@ -1,5 +1,3 @@
-
-
 import requests
 
 def obtener_precio_bitcoin():
