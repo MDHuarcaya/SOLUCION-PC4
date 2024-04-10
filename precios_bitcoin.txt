@@ -1,6 +1,0 @@
-Fecha y hora: 2024-04-08 23:25:47 -05
-Precio de Bitcoin:
-USD: 71,015.853
-GBP: 56,113.745
-EUR: 65,408.655
-
