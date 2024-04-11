@@ -1,27 +1,27 @@
 import requests
 
-def obtener_precio_bitcoin():
+def precio_BC():
     try:
-        response = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
-        response.raise_for_status()  # Genera una excepción si la solicitud no fue exitosa
-        data = response.json()
-        precio_usd = data["bpi"]["USD"]["rate_float"]
-        return precio_usd
+        respuesta = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
+        respuesta.raise_for_status() 
+        datos = respuesta.json()
+        precio_USD = datos["bpi"]["USD"]["rate_float"]
+        return precio_USD
     except requests.RequestException as e:
         print("Error al obtener el precio de Bitcoin:", e)
         return None
 
-def calcular_costo_en_usd(cantidad_bitcoins, precio_bitcoin_usd):
-    costo_usd = cantidad_bitcoins * precio_bitcoin_usd
+def calcular_costo_USD(cantidad_bc, precio_bc_USD):
+    costo_usd = cantidad_bc * precio_bc_USD
     return costo_usd
 
 def main():
     try:
-        cantidad_bitcoins = float(input("Por favor, introduzca la cantidad de Bitcoins que posee: "))
-        precio_bitcoin_usd = obtener_precio_bitcoin()
-        if precio_bitcoin_usd is not None:
-            costo_usd = calcular_costo_en_usd(cantidad_bitcoins, precio_bitcoin_usd)
-            print(f"El costo actual de {cantidad_bitcoins} Bitcoins es: ${costo_usd:,.4f}")
+        cantidad_bc = float(input("Por favor, introduzca la cantidad de Bitcoins que posee: "))
+        precio_bc_USD = precio_BC()
+        if precio_bc_USD is not None:
+            costo_usd = calcular_costo_USD(cantidad_bc, precio_bc_USD)
+            print(f"El costo actual de {cantidad_bc} Bitcoins es: ${costo_usd:,.4f}")
         else:
             print("No se pudo obtener el precio actual de Bitcoin.")
     except ValueError:

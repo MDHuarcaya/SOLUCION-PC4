@@ -51,7 +51,7 @@ def main():
             linea = int(input("Ingrese el número de línea que desea mostrar: "))
             mostrar_linea_tabla(numero, linea)
         elif opcion == '4':
-            print("¡Hasta luego!")
+            print("Un placer ayudarte, ¡Hasta luego!")
             break
         else:
             print("Opción no válida. Por favor, seleccione una opción válida.")
