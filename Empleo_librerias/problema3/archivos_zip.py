@@ -2,7 +2,7 @@ import os
 import zipfile
 
 # crear archivo zipeado
-directorio = './naturaleza'
+directorio = './NATURALEZA'
 archivos = os.listdir(directorio)
 
 with zipfile.ZipFile('naturaleza.zip', 'w') as zip:

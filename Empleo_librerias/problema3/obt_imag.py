@@ -1,7 +1,7 @@
 import os
 import requests
 
-os.chdir('/workspaces/SOLUCION-PC4/naturaleza')
+os.chdir('/workspaces/SOLUCION-PC4/NATURALEZA')
 
 # url del elemento a descargar
 url = 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Bow_Lake_beim_Icefields_Parkway.jpg/640px-Bow_Lake_beim_Icefields_Parkway.jpg'
